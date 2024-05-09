@@ -71,7 +71,7 @@ export default function Banner() {
 
         return (()=>{clearInterval(intervalId)})
     },[b1,b2,b3,b4])
-    
+
     /* UseEffect para a cada Click */
     useEffect(() => {
         if (sel === -1){
@@ -126,21 +126,23 @@ export default function Banner() {
       <div id="banner">
         <button onClick={()=>{setSel(0)}} className="cont1">
             <Image src={localImage} alt="Logo do Moleza" />
-            <h1>A Melhor lanchonet da Mauá</h1>
+            <h1>A Melhor lanchonete da Mauá</h1>
         </button>
         <button onClick={()=>{setSel(1)}} className="cont2">
-            <Image className="salgado co" src={localCoxinha} alt="Coxinha" />
-            <div>
-                <h2>Bateu aquela Fominha chata?</h2>
-                <h1>Venha provar nossos salgados</h1>
-            </div>
-            <Image className="salgado be" src={localBeuru} alt="Beuru" />
+            {b2}
         </button>
         <button onClick={()=>{setSel(2)}} className="cont3">
             {b3}
         </button>
         <button onClick={()=>{setSel(3)}} className="cont4">
-            {b4}
+            <div className='salgado'>
+                <Image className="co" src={localCoxinha} alt="Coxinha" />
+                <Image className="be" src={localBeuru} alt="Beuru" />
+                <div className='texto'>
+                    <h2>Bateu aquela Fominha chata?</h2>
+                    <h1>Venha provar nossos salgados</h1>
+                </div>
+            </div>
         </button>
         <i className='fa'><FaCircleNotch/></i>
       </div>
