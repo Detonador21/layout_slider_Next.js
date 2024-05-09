@@ -1,0 +1,175 @@
+#banner {
+    width: 100%;
+    height: 500px;
+    background: rgb(249, 244, 226);
+    position: relative;
+    overflow: hidden;
+}
+#banner .cont1,
+#banner .cont2,
+#banner .cont3,
+#banner .cont4 {
+    content: "";
+    width: 80%;
+    margin: 10%;
+    height: 80%;
+    margin-top: 4%;
+    height: 80%;
+    display: inline-block;
+    clip-path: circle(2.5% at 94% 6%);
+    position: absolute;
+    box-shadow: 0 0 50px white;
+    border-radius: 50px;
+    z-index: 50;
+    top:0;
+    right:0;
+}
+#banner .cont1 {
+    background: linear-gradient(to right top, white, rgb(253, 239, 221));
+    border: 10px double orange;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#banner .cont2 {
+    background: linear-gradient(to right top, orange, rgb(248, 191, 87));
+    border: 10px double white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#banner .cont3 {
+    background: linear-gradient(to left bottom, white, rgb(253, 239, 221));
+    border: 10px double orange;
+}
+#banner .cont4 {
+    background: linear-gradient(to left bottom, orange, rgb(248, 191, 87));
+    border: 10px double white;
+}
+#banner .fa * {
+    font-size: calc(195px + 35vw);
+    color: rgb(255, 234, 0);
+    transform: scaleY(0.7);
+    position: absolute;
+    right: -30vw;
+    z-index: 40;
+    top: -40vh;
+}
+
+#banner .cont1 h1 {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(136, 88, 0);
+    width: 50%;
+    font-size: 50px;
+    color: orange;
+}
+
+#banner .cont2 .salgado {
+    width: 40%;
+    position: absolute;
+}
+#banner .cont2 .salgado .co {
+    top: -50%;
+    left: -50%;
+}
+#banner .cont2 .salgado .be {
+    bottom: 0;
+    right: 0;
+}
+
+
+
+#banner .rotate1-false {
+    animation: roda-4_1 1s linear forwards;
+}
+#banner .rotate2-false {
+    animation: roda-1_2 1s linear forwards;
+}
+#banner .rotate3-false {
+    animation: roda-2_3 1s linear forwards;
+}
+#banner .rotate4-false {
+    animation: roda-3_4 1s linear forwards;
+}
+
+
+#banner .rotate1-true {
+    animation: roda-4_1 0.2s linear forwards;
+}
+#banner .rotate2-true {
+    animation: roda-1_2 0.2s linear forwards;
+}
+#banner .rotate3-true {
+    animation: roda-2_3 0.2s linear forwards;
+}
+#banner .rotate4-true {
+    animation: roda-3_4 0.2s linear forwards;
+}
+
+
+
+@keyframes roda-1_2 {
+    0% {
+        top:0;
+        right:0;
+        clip-path: circle(135% at 94% 6%);
+        cursor: default;
+    }
+    40% {
+        clip-path: circle(3% at 94% 6%);
+    }
+    100%{
+        top:-50px;
+        right:20px;
+        cursor: pointer;
+    }
+}
+@keyframes roda-2_3 {
+    0%{
+        top:-50px;
+        right:20px;
+    }
+    25%{
+        top:-100px;
+        right:10px;
+    }
+    25.1%{
+        top:83px;
+        right:-200px;
+    }
+    100%{
+        top:77px;
+        right:-150px;
+    }
+}
+@keyframes roda-3_4 {
+    0%{
+        top:77px;
+        right:-150px;
+    }
+    100%{
+        top:60px;
+        right:-90px;
+    }
+}
+@keyframes roda-4_1 {
+    0%{
+        top:60px;
+        right:-90px;
+    }
+    60%{
+        top:30px;
+        right:-30px;
+    }
+    80% {
+        clip-path: circle(3% at 94% 6%);
+    }
+    100%{
+        top:0;
+        right:0;
+        clip-path: circle(135% at 94% 6%);
+        cursor: default;
+    }
+}
